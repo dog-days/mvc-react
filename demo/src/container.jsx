@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserMVC as MVC } from 'mvc-react';
-import Controller from 'react-router-controller';
+import { BrowserMVC as MVC, Controller } from 'mvc-react';
 
 function modelRegister(register) {
   //配置这些目录时，没有目录会报错，新建目录后还报错，可以新建一个空文件，保存以下其他文件触发重编译，就没问题了

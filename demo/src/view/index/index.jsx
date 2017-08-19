@@ -22,9 +22,11 @@ export default class IndexView extends React.Component {
     }
   };
   render() {
+    console.log('主页页面');
     const { display } = this.props;
     return (
       <div>
+        当前位置主页：
         <button onClick={this.showToggleEvent}>
           {display && '隐藏'}
           {!display && '显示'}
