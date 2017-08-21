@@ -2,7 +2,7 @@
 
 在  `react` 、`redux` 、`router` 的基础上实现新一代 MVC 的一套解决方案，可以摆脱大量繁杂的配置过程。
 
-
+相关依赖： [react-router-controller](https://github.com/dog-days/react-router-controller) 、[react-router-redux-saga-model](https://github.com/dog-days/react-router-redux-saga-model)、[redux-saga-model](https://github.com/tomsonTang/redux-saga-model)
 
 ## 初览-第一印象
 
@@ -75,9 +75,9 @@ mvc-react 与传统的 MVC 模式比较的相同点：
 
 在 mvc-react 中，controller 实际上是对路由的高阶抽象，在 controller  中，你可以选择对外开放什么页面以及开放哪些页面。
 
-mvc-react 底层封装了 [react-router-controller](https://github.com/dog-days/react-router-controller) ，该组件实现了 URL 与 controller 以及对应d的 View 的动态映射规则。
+mvc-react 底层封装了 [react-router-controller](https://github.com/dog-days/react-router-controller) ，该组件实现了 URL 与 controller 以及对应的 View 的动态映射规则。
 
-使用该功能只需要提供一个参数对象给 Controller 的静态 set 方法即可：
+使用该功能只需要提前提供一个参数对象给 Controller 的静态 set 方法即可：
 
 ```jsx
   Controller.set({
@@ -175,7 +175,7 @@ renderApp();
 
 我们只需要在 mvc 组件中注入一个 modelRegister 回调，即可拿到入参，注册 model 的方法 `register` 对 model 进行注册。
 
-结合 [Controller](#controller) 中的介绍，我们可以写出动态加载 controller 以及 view 组件的同时动态注册 model 的代码。
+配合 [Controller](#controller) 中的介绍，我们可以写出动态加载 controller 以及 view 组件的同时动态注册 model 的代码。
 
 ```jsx
 import React from 'react';
@@ -223,6 +223,8 @@ function renderApp() {
 renderApp();
 ```
 
+注意：配置 controller 规则的  Controller.set 方法必须在项目启动时同步执行，不支持异步配置。 modeRegister 是同步执行的，故可以在 modeRegister 回调中放入 Controller.set。
+
 
 
 ### View
@@ -267,4 +269,16 @@ export default class AboutView extends React.Component {
   }
 }
 ```
+
+
+
+## 其他
+
+1. 项目打包工具:  webpack
+
+2. 项目启动工具：[create-react-boilerplate-app](https://github.com/dog-days/create-react-boilerplate-app)
+
+   ​
+
+   ​
 
