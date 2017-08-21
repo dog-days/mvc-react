@@ -71,7 +71,7 @@ mvc-react 与传统的 MVC 模式比较的相同点：
 
 ### Controller
 
-在开发中我们最常做的就是区分模块，Controller 也一样，你可以根据你的需要来划分 controller 的纬度。
+在开发中我们最常做的就是区分模块，Controller 也一样，你可以根据你的需要来划分 controller 的纬度。
 
 在 mvc-react 中，controller 实际上是对路由的高阶抽象，在 controller  中，你可以选择对外开放什么页面以及开放哪些页面。
 
@@ -175,7 +175,7 @@ renderApp();
 
 我们只需要在 mvc 组件中注入一个 modelRegister 回调，即可拿到入参，注册 model 的方法 `register` 对 model 进行注册。
 
-结合 [Controller](#Controller) 中的介绍，我们可以写出动态加载 controller 以及 view 组件的同时动态注册 model 的代码。
+结合 [Controller](#controller) 中的介绍，我们可以写出动态加载 controller 以及 view 组件的同时动态注册 model 的代码。
 
 ```jsx
 import React from 'react';
@@ -266,10 +266,5 @@ export default class AboutView extends React.Component {
     );
   }
 }
-
 ```
-
-
-
-## 案例
 
