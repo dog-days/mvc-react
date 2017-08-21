@@ -71,7 +71,7 @@ mvc-react 与传统的 MVC 模式比较的相同点：
 
 ### Controller
 
-在开发中我们最常做的就是区分模块，Controller 也一样，你可以根据你的需要来划分 controller 的纬度。
+在开发中我们最常做的就是区分模块，Controller 也一样，你可以根据你的需要来划分 controller 的纬度。
 
 在 mvc-react 中，controller 实际上是对路由的高阶抽象，在 controller  中，你可以选择对外开放什么页面以及开放哪些页面。
 
