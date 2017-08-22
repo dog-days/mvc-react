@@ -40,7 +40,7 @@
   "homepage": "https://github.com/dog-days/mvc-react#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-router-controller": "0.0.8",
+    "react-router-controller": "0.0.9",
     "react-router-redux-saga-model": "^0.1.6"
   },
   "devDependencies": {
