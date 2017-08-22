@@ -1,6 +1,6 @@
 {
   "name": "mvc-react",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "mvc-react",
   "main": "libs/index.js",
   "scripts": {
@@ -40,8 +40,8 @@
   "homepage": "https://github.com/dog-days/mvc-react#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-router-controller": "0.0.6",
-    "react-router-redux-saga-model": "^0.1.5"
+    "react-router-controller": "0.0.8",
+    "react-router-redux-saga-model": "^0.1.6"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -75,7 +75,8 @@
       "stage-0"
     ],
     "plugins": [
-      "transform-decorators-legacy"
+      "transform-decorators-legacy",
+      "transform-runtime"
     ],
     "env": {
       "development": {
@@ -86,7 +87,8 @@
       },
       "default": {
         "plugins": [
-          "transform-decorators-legacy"
+          "transform-decorators-legacy",
+          "transform-runtime"
         ],
         "presets": [
           "react",
@@ -96,7 +98,8 @@
       },
       "es": {
         "plugins": [
-          "transform-decorators-legacy"
+          "transform-decorators-legacy",
+          "transform-runtime"
         ],
         "presets": [
           "react",
