@@ -1,9 +1,10 @@
 {
   "name": "mvc-react",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "mvc-react",
   "main": "libs/index.js",
   "scripts": {
+    "build-publish": "npm run build && npm publish",
     "build": "npm run build-es && npm run build-default",
     "build-es": "cross-env BABEL_ENV=es babel ./src -d es",
     "build-default": "cross-env BABEL_ENV=default babel ./src -d libs",
@@ -40,7 +41,7 @@
   "homepage": "https://github.com/dog-days/mvc-react#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-router-controller": "0.0.9",
+    "react-router-controller": "0.1.1",
     "react-router-redux-saga-model": "^0.1.6"
   },
   "devDependencies": {
