@@ -1,6 +1,6 @@
 {
   "name": "mvc-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "mvc-react",
   "main": "libs/index.js",
   "scripts": {
@@ -42,7 +42,7 @@
   "dependencies": {
     "prop-types": "^15.5.10",
     "react-router-controller": "0.1.3",
-    "react-router-redux-saga-model": "^0.1.9"
+    "react-router-redux-saga-model": "^0.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
