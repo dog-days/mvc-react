@@ -71,6 +71,10 @@ export default class I18nProvider extends React.Component {
           });
         });
       }
+    } else {
+      this.setState({
+        canRender: true,
+      });
     }
   }
 
