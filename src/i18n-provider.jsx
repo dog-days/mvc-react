@@ -81,7 +81,7 @@ export default class I18nProvider extends React.Component {
   render() {
     const { children, I18nLoading } = this.props;
     const { canRender } = this.state;
-    if (!canRender) {
+    if (!canRender && localStorage.currentLanguage) {
       if (I18nLoading) {
         return <I18nLoading />;
       }
