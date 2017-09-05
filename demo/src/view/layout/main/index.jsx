@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { switchLanguage, t } from 'mvc-react';
 
 import logo from 'src/style/img/logo.svg';
 import 'src/style/css/bootstrap.css';
@@ -19,10 +20,30 @@ class MainLayout extends React.Component {
                 </a>
               </li>
               <li>
-                <Link to="/main/index">主页</Link>
+                <Link to="/main/index">
+                  {t('主页')}
+                </Link>
               </li>
               <li>
-                <Link to="/main/about/id/1003">关于</Link>
+                <Link to="/main/about/id/1003">
+                  {t('关于')}
+                </Link>
+              </li>
+              <li
+                onClick={e => {
+                  switchLanguage('zh_CN');
+                }}
+                className="language"
+              >
+                <a>中文</a>
+              </li>
+              <li
+                onClick={e => {
+                  switchLanguage('en_US');
+                }}
+                className="language"
+              >
+                <a>English</a>
               </li>
             </ul>
           </div>

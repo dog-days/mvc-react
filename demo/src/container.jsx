@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrowserMVC as MVC, Controller } from 'mvc-react';
+import {
+  BrowserMVC as MVC,
+  Controller,
+  I18nProvider,
+  i18nPlugin,
+} from 'mvc-react';
+import defaultLanguageList from './i18n/zh_CN';
 
 function modelRegister(register) {
   //配置这些目录时，没有目录会报错，新建目录后还报错，可以新建一个空文件，保存以下其他文件触发重编译，就没问题了
@@ -38,18 +44,30 @@ function modelRegister(register) {
           return false;
         });
     },
+    plugins: [i18nPlugin],
     //设置首页path（跳转路径，即react-router path='/'时，会跳转到indexPath）
     //第一个字符必须是'/'，不能是main/index，要是绝对的路径
     indexPath: '/main/index',
   });
 }
 
+const getLanguageSpecificList = language => {
+  return import(`./i18n/${language}.js`).catch(e => {
+    console.log(e);
+    return false;
+  });
+};
 export default function container(props) {
   return (
-    <MVC
-      modelRegister={modelRegister}
-      hot={props.hot}
-      production={process.env.NODE_ENV === 'production'}
-    />
+    <I18nProvider
+      getLanguageSpecificList={getLanguageSpecificList}
+      defaultLanguageList={defaultLanguageList}
+    >
+      <MVC
+        modelRegister={modelRegister}
+        hot={props.hot}
+        production={process.env.NODE_ENV === 'production'}
+      />
+    </I18nProvider>
   );
 }
