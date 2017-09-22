@@ -18,10 +18,10 @@ export default class ControllerBindModel extends React.Component {
     const { modelRegister, basename, hot } = this.props;
     if (hot && modelRegister) {
       //热替换需要每次更新运行
-      modelRegister(this.context.sagaStore.register);
+      modelRegister(this.context.sagaStore.register, hot);
     } else if (this.firstRender && modelRegister) {
       this.firstRender = false;
-      modelRegister(this.context.sagaStore.register);
+      modelRegister(this.context.sagaStore.register, false);
     }
     return <RouteController basename={basename} hot={hot} />;
   }

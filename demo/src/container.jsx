@@ -7,16 +7,16 @@ import {
 } from 'mvc-react';
 import defaultLanguageList from './i18n/zh_CN';
 
-function modelRegister(register) {
+function modelRegister(register, hot) {
   //配置这些目录时，没有目录会报错，新建目录后还报错，可以新建一个空文件，保存以下其他文件触发重编译，就没问题了
   Controller.set({
     readViewFile(viewId, controllerId, firstLoad) {
-      if (firstLoad) {
+      if (firstLoad || hot) {
         import(/* webpackMode: "eager" */
         `./model/${viewId}.js`)
           .then(model => {
             //注册sagaModel
-            register(model.default);
+            register(model.default, hot || false);
           })
           .catch(e => {
             //console.log(e);
