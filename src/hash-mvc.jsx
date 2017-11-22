@@ -3,7 +3,7 @@ import Provider from 'react-router-redux-saga-model/libs/hash-provider';
 import ControllerBindModel from './controller-bind-model';
 
 export default class HashMVC extends React.Component {
-  displayName = 'BrowserMVC';
+  displayName = 'HashMVC';
   render() {
     const { modelRegister, ...others } = this.props;
     return (

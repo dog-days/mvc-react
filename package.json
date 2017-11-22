@@ -52,6 +52,8 @@
     "cross-env": "^5.0.4",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
     "prettier": "^1.5.3",
     "promise": "^8.0.1",
     "react": "^15.6.1",
