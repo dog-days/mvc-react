@@ -13,6 +13,7 @@
     "start-demo": "react-boilerplate-app-scripts start",
     "build-demo": "react-boilerplate-app-scripts build",
     "serve-build": "react-boilerplate-app-scripts serve-build",
+    "use": "react-boilerplate-app-scripts use",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,8 +42,9 @@
   },
   "homepage": "https://github.com/dog-days/mvc-react#readme",
   "dependencies": {
+    "antd": "^2.13.10",
     "prop-types": "^15.5.10",
-    "react-router-controller": "0.1.6",
+    "react-router-controller": "^0.1.7",
     "react-router-redux-saga-model": "^0.2.3"
   },
   "devDependencies": {
@@ -58,7 +60,9 @@
     "promise": "^8.0.1",
     "react": "^15.6.1",
     "react-boilerplate-app-scripts": "^0.1.8",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5"
   },
   "peerDependencies": {
     "react": ">=15.5.0"
